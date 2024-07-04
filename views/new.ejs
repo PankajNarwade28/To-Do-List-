@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new To-do</title>
+    <link rel="stylesheet" href="../public/new.css" />
+    <style>
+      .heading {
+        font-size: 2rem;
+        text-align: center;
+        background-color: aquamarine;
+        padding: 20px;
+        border-bottom: 2px solid black;
+      }
+      .blue-btn {
+        text-align: center;
+        color: blue;
+        padding: 8px 20px;
+        margin: 5px;
+        /* width: 75%; */
+        border: none;
+        border-radius: 10px;
+        border: 2px solid transparent;
+      }
+
+      .blue-btn:hover {
+        box-shadow: 2px 2px 10px #11c3f0;
+        border: 2px solid white;
+        background-color: #50b0e7;
+        color: white;
+      }
+      .Cancelbtn {
+        text-align: center;
+        color: blue;
+        padding: 8px 20px;
+        width: auto;
+        margin: 2px;
+        border: none;
+        border-radius: 10px;
+        border: 2px solid transparent;
+      }
+
+      .Cancelbtn:hover {
+        box-shadow: 2px 2px 10px #11c3f0;
+        border: 2px solid white;
+        background-color: #50b0e7;
+        color: white;
+      }
+      .flex-d {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        border: 2px solid black;
+        padding: 10px;
+        margin: 0 auto;
+        border-radius: 5px;
+        background-color: #6fecbc;
+      }
+      .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      .input {
+        padding: 15px 10px;
+        margin: 10px;
+        width: 90%;
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+      .flex-btn {
+        display: flex;
+        flex-direction: column;
+        margin: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Add New To-Do</h1>
+
+    <div class="flex-d">
+      <form action="/todo" method="post" class="flex">
+        <textarea
+          class="input"
+          type="text"
+          name="task"
+          cols="20"
+          placeholder="Enter Task in To-Do"
+        ></textarea>
+        <button class="blue-btn" id="Add">Add</button>
+      </form>
+
+      <form action="/todo" method="get" class="flex-btn">
+        <button class="Cancelbtn">Cancel</button>
+      </form>
+    </div>
+  </body>
+</html>
